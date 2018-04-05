@@ -39,9 +39,9 @@ dNewtonJointSlidingHinge::dNewtonJointSlidingHinge(const dMatrix pintAndPivotMat
 void dNewtonJointSlidingHinge::SetLimits(bool enable, dFloat minDistance, dFloat maxDistance)
 {
 	dCustomSlidingContact* const joint = (dCustomSlidingContact*)m_joint;
-	joint->EnableLimits(enable);
+	joint->EnableLinearLimits(enable);
 	if (enable) {
-		joint->SetLimits(dMin(minDistance, 0.0f), dMax(maxDistance, 0.0f));
+		joint->SetLinearLimits(dMin(minDistance, 0.0f), dMax(maxDistance, 0.0f));
 	}
 }
 
