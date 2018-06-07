@@ -340,7 +340,7 @@ public class NewtonBody: MonoBehaviour
     public float m_Ixx = 0.0f;
     public float m_Iyy = 0.0f;
     public float m_Izz = 0.0f;
-    public bool m_CalculateInertia=false;
+    public bool m_CalculateInertia = false;
     public bool m_isScene = false;
     public bool m_showGizmo = false;
     public float m_gizmoScale = 1.0f;

@@ -190,14 +190,16 @@ void dNewtonBody::SetCenterOfMass(float com_x, float com_y, float com_z, float I
 	NewtonCollision* const collision = NewtonBodyGetCollision(m_body);
 	if (Calc_inertia) {
 		NewtonBodySetMassProperties(m_body, mass, NewtonBodyGetCollision(m_body));
-		NewtonBodyGetCentreOfMass (m_body, &com[0]);
+		NewtonBodyGetCentreOfMass(m_body, &com[0]);
+		
 	}
 	else {
 		NewtonBodySetMassMatrix(m_body, mass, Ixx, Iyy, Izz);
 		com.m_x = 0;
 		com.m_y = 0;
 		com.m_z = 0;
-		}
+		
+	}
 	com.m_x += com_x;
 	com.m_y += com_y;
 	com.m_z += com_z;
